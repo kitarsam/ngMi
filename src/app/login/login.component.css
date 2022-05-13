@@ -1,0 +1,6 @@
+input.ng-invalid.ng-dirty {
+  border: 2px solid rgb(199, 12, 12)
+}
+input.ng-valid.ng-touched {
+  border: 2px solid rgb(12, 199, 43)
+}

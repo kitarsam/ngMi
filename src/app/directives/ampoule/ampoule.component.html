@@ -1,0 +1,14 @@
+<div
+  (click)="toggle()"
+  [ngClass]="{
+    allume: isAllume,
+    eteinte: !isAllume
+  }"
+>
+  ampoule
+</div>
+<input *ngIf="isAllume" type="text" appRainbow />
+<p appHighlight [in]="'white'" [out]="'red'">cc</p>
+<p appHighlight [in]="'black'" [out]="'white'">cc</p>
+<p appHighlight [in]="'yellow'" [out]="'green'">cc</p>
+<p appHighlight>cc</p>

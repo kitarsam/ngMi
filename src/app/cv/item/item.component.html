@@ -1,0 +1,12 @@
+<div *ngIf="cv" (click)="sendSelectCvEvent()">
+  <img
+    class="rounded-circle"
+    [ngStyle]="{
+      width: size + 'px',
+      height: size + 'px'
+    }"
+    src="assets/images/{{ cv.path | defaultImage }}"
+    alt="{{ cv?.name }}"
+  />
+  {{ cv?.firstname }} {{ cv?.name }}
+</div>

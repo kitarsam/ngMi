@@ -1,0 +1,19 @@
+<form #myForm="ngForm">
+  name :<input type="text" required ngModel name="name" class="form-control" />
+  age :
+  <input
+    type="text"
+    ngModel
+    required
+    pattern="[0-1]?\d{1,2}"
+    name="age"
+    class="form-control"
+  />
+</form>
+<button
+  [disabled]="myForm.invalid"
+  (click)="process(myForm)"
+  class="btn btn-primary"
+>
+  enregistrer
+</button>

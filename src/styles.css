@@ -1,0 +1,12 @@
+/* You can add global styles to this file, and also import other style files */
+/* @import "~bootstrap"; */
+@import "~font-awesome";
+@import "~ngx-toastr/toastr.css";
+@import "assets/css/rotating-card.css";
+@import "assets/css/ltr/bootstrap.min.css";
+/* @import "assets/css/ltr/bootstrap.ltr.css"; */
+@import "assets/css/plugins/metisMenu/metisMenu.min.css";
+@import "assets/css/plugins/timeline.css";
+@import "assets/css/ltr/sb-admin-2.css";
+@import "assets/css/plugins/morris.css";
+@import "assets/css/font-awesome/font-awesome.min.css";

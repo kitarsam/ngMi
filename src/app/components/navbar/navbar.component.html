@@ -1,0 +1,51 @@
+<div class="sidebar-nav navbar-collapse">
+  <ul class="nav" id="side-menu">
+    <li>
+      <a
+        [routerLink]="['/']"
+        routerLinkActive="active text-danger"
+        [routerLinkActiveOptions]="{ exact: true }"
+        ><i class="fa fa-dashboard fa-fw"></i> Dashboard</a
+      >
+    </li>
+    <li>
+      <a
+        [routerLink]="['/cv']"
+        routerLinkActive="active text-danger"
+        [routerLinkActiveOptions]="{ exact: true }"
+        ><i class="fa fa-dashboard fa-fw"></i> Cv</a
+      >
+    </li>
+    <li>
+      <a [routerLink]="['/cv/add']"
+        *ngIf="authService.isAuthenticated()"
+        routerLinkActive="active text-danger"
+        ><i class="fa fa-dashboard fa-fw"></i>Add Cv</a
+      >
+    </li>
+    <li>
+      <a [routerLink]="['/word']" routerLinkActive="active text-danger"
+        ><i class="fa fa-dashboard fa-fw"></i> Word</a
+      >
+    </li>
+    <li>
+      <a [routerLink]="['/todo']" routerLinkActive="active text-danger"
+        ><i class="fa fa-dashboard fa-fw"></i> Todo</a
+      >
+    </li>
+    <li>
+      <a [routerLink]="['/color']" routerLinkActive="active text-danger"
+        ><i class="fa fa-dashboard fa-fw"></i> Color</a
+      >
+    </li>
+    <li *ngIf="!authService.isAuthenticated()">
+      <a [routerLink]="['/login']" routerLinkActive="active text-danger"
+        ><i class="fa fa-dashboard fa-fw"></i> Login
+      </a>
+    </li>
+    <li *ngIf="authService.isAuthenticated()">
+      <a (click)="logout()"><i class="fa fa-dashboard fa-fw"></i> Logout
+      </a>
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,51 @@
+<form #loginForm="ngForm">
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input
+      type="email"
+      name="email"
+      #emailInput="ngModel"
+      email
+      required
+      ngModel
+      class="form-control"
+      id="exampleInputEmail1"
+      aria-describedby="emailHelp"
+      placeholder="Enter email"
+    />
+    <div
+      *ngIf="emailInput.invalid && emailInput.touched"
+      class="alert alert-danger"
+    >
+      Veuillez spécifier un email valide
+    </div>
+    <small id="emailHelp" class="form-text text-muted"
+      >We'll never share your email with anyone else.</small
+    >
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input
+      #pwdInput="ngModel"
+      type="password"
+      name="password"
+      required
+      ngModel
+      minlength="4"
+      class="form-control"
+      id="exampleInputPassword1"
+      placeholder="Password"
+    />
+    <div
+      *ngIf="pwdInput.invalid && pwdInput.touched"
+      class="alert alert-danger"
+    >
+      Veuillez spécifier un password valide
+    </div>
+  </div>
+  <button
+    (click)="login(loginForm.value)"
+    [disabled]="loginForm.invalid" type="submit" class="btn btn-primary">
+    login
+  </button>
+</form>

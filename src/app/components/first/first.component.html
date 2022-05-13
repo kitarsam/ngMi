@@ -1,0 +1,24 @@
+<p [style.color]="color" [hidden]="isHidden">first works!</p>
+<div
+  (click)="processStafs()"
+  class="alert alert-primary">
+  Bonjour {{ name }}
+  <app-second></app-second>
+</div>
+
+<input
+  #inputMessage
+  type="text" class="form-control">
+<button
+  (click)="showMessage(inputMessage.value)"
+  class="btn btn-dark">
+  affiche input content
+</button>
+
+<p>LE contenu de l'input est : {{ message }}</p>
+
+<div>
+  cc
+</div>
+
+<input type="text">

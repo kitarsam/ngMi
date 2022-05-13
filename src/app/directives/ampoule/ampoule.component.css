@@ -1,0 +1,16 @@
+div {
+  border: solid black 2px;
+  padding: 50px;
+  height: 150px;
+  width: 150px;
+}
+
+.eteinte {
+  background-color: black;
+  color: white;
+}
+
+.allume {
+  background-color: yellow;
+  color: black;
+}
